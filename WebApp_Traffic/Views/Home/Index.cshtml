@@ -1,0 +1,30 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1>Welcome to Traffic Webapplication</h1>
+
+</div>
+
+<div class="text-center">
+
+    <h3 class="text-info">This application was created to check the entry and exit of users</h3>
+</div>
+<hr />
+<br />
+<div class="text-center">
+    <h6 class="text-danger">
+        برای ورود لطفا کد کاربری یا کد یکتا را وارد کنید
+    </h6>
+    <br />
+    <br />
+   
+    @using (Html.BeginForm("Entry", "Traffic"))
+    {
+        <input type="text" id="txt" name="txt" />
+    }
+</div>
+

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Traffic>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<partial name="_Notifications" />
+
+
+<h1>List of Traffic</h1>
+<hr />
+<table class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr class="table-primary">
+            <th>
+                کد یکتا
+            </th>
+            <th>
+                تایم ورود
+            </th>
+            <th>
+                نوع تردد
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="20%">
+                    @obj.user.Id
+                </td>
+                <td width="30%">
+                    @obj.EntryOrOut_Time
+                </td>
+                <td width="30%">
+                    @obj.Type_Traffic
+                </td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Traffic" asp-action="Edit" asp-route-id="@obj.Id_Traffic">
+                            ویرایش
+                        </a>
+                        <a asp-controller="Traffic" asp-action="DeleteUser" asp-route-id="@obj.Id_Traffic">
+                            حذف
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+

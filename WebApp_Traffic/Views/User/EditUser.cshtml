@@ -1,0 +1,37 @@
+﻿@model User
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+
+<form method="post" asp-action="EditUser">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2>ویرایش کاربر</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            @*<span asp-validation-for="FirstName" class="text-bg-danger"></span>*@
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            @*<span asp-validation-for="LastName" class="text-bg-danger"></span>*@
+        </div>
+        <div class="mb-3">
+            <label asp-for="National_Code"></label>
+            <input asp-for="National_Code" class="form-control" />
+            @*<span asp-validation-for="National_Code" class="text-bg-danger"></span>*@
+        </div>
+        <div class="mb-3">
+            <label asp-for="Id">Unique_Code</label>
+            <input asp-for="Id" class="form-control" disabled />
+            @*<span asp-validation-for="Id" class="text-bg-danger"></span>*@
+        </div>
+        <button type="submit" class="btn btn-outline-primary" style="width:150px">ثبت ویرایش</button>
+        <a asp-controller="User" asp-action="Index" class="btn btn-outline-secondary" style="width:200px">بازگشت به لیست کاربران</a>
+    </div>
+</form>
+

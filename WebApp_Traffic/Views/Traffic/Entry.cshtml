@@ -1,0 +1,44 @@
+﻿@model WebApp_Traffic.Models.Traffic
+
+@{
+    ViewData["Title"] = "Entry";
+}
+
+
+@{
+    var data_2 = ViewData["Message_2"];
+}
+
+
+
+@*@if(data.Type_Traffic == 0 && data!=null)*@
+
+    <h3>ورورد</h3>
+    <p>
+        FirstName : @Model.user.FirstName
+        LastName : @Model.user.LastName
+        DateTime : @Model.EntryOrOut_Time
+        @*Type : @data.Type_Traffic*@
+    </p>
+
+@*
+else if (data.Type_Traffic == 0 && data != null)
+{
+<h3>خروج</h3>
+<p>
+    FirstName : @data.user.FirstName
+    LastName : @data.user.LastName
+    DateTime : @data.EntryOrOut_Time
+    Type : @data.Type_Traffic
+    </p>
+}
+else
+{
+    <h3>@data_1</h3>
+}*@
+
+
+
+
+
+

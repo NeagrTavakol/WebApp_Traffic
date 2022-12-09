@@ -1,0 +1,33 @@
+﻿@model User
+@{
+    ViewData["Title"] = "DeleteUser";
+}
+
+<form method="post" asp-action="DeleteUserPost">
+    <input asp-for="Id" type="hidden" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2>حذف کاربر</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="National_Code"></label>
+            <input asp-for="National_Code" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Id">Unique_Code</label>
+            <input asp-for="Id" class="form-control" disabled />
+        </div>
+        <button type="submit" class="btn btn-outline-primary" style="width:150px">حذف کاربر</button>
+        <a asp-controller="User" asp-action="Index" class="btn btn-outline-secondary" style="width:200px">بازگشت به لیست کاربران</a>
+    </div>
+</form>
+
