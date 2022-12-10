@@ -8,6 +8,7 @@ namespace WebApp_Traffic.Models
         public int Id_Traffic { get; set; }
         public int Type_Traffic { get; set; }
         public DateTime EntryOrOut_Time { get; set; }
+        public int userid { get; set; }
         public User user { get; set; }
     }
 }

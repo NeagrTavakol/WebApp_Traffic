@@ -11,31 +11,31 @@
 
 
 
-@*@if(data.Type_Traffic == 0 && data!=null)*@
-
+@if(Model.Type_Traffic == 0 && Model!=null)
+{
     <h3>ورورد</h3>
     <p>
         FirstName : @Model.user.FirstName
         LastName : @Model.user.LastName
         DateTime : @Model.EntryOrOut_Time
-        @*Type : @data.Type_Traffic*@
+        Type : @Model.Type_Traffic
     </p>
 
-@*
-else if (data.Type_Traffic == 0 && data != null)
+}
+else if (Model.Type_Traffic == 1 && Model != null)
 {
 <h3>خروج</h3>
 <p>
-    FirstName : @data.user.FirstName
-    LastName : @data.user.LastName
-    DateTime : @data.EntryOrOut_Time
-    Type : @data.Type_Traffic
+    FirstName : @Model.user.FirstName
+    LastName : @Model.user.LastName
+    DateTime : @Model.EntryOrOut_Time
+    Type : @Model.Type_Traffic
     </p>
 }
 else
 {
-    <h3>@data_1</h3>
-}*@
+    <h3>@data_2</h3>
+}
 
 
 

@@ -1,0 +1,84 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApp_Traffic
+build_property.RootNamespace = WebApp_Traffic
+build_property.ProjectDir = C:\Users\Dear User\Desktop\ProgramSample\2022\WebApp_Traffic\WebApp_Traffic\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Dear User\Desktop\ProgramSample\2022\WebApp_Traffic\WebApp_Traffic
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Shared/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Traffic/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Traffic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Traffic/Entry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1xFbnRyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Traffic/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1xGaWx0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Traffic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/User/DeleteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/User/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/User/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGaWx0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dear User/Desktop/ProgramSample/2022/WebApp_Traffic/WebApp_Traffic/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tneywd5l2x

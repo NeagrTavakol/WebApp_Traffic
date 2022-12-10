@@ -6,7 +6,16 @@
 <partial name="_Notifications" />
 
 
-<h1>List of Traffic</h1>
+<h1>لیست ترددها</h1>
+
+@using (Html.BeginForm("Filter", "Traffic"))
+    {
+    <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="جستجو" id="txt" name="txt">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit" asp-action="Filter" asp-controller="Traffic">جستجو</button>
+    </form>
+    }
+
 <hr />
 <table class="table table-striped table-bordered" style="width:100%">
     <thead>
@@ -28,9 +37,10 @@
     <tbody>
         @foreach (var obj in Model)
         {
+           
             <tr>
                 <td width="20%">
-                    @obj.user.Id
+                    @obj.userid
                 </td>
                 <td width="30%">
                     @obj.EntryOrOut_Time
@@ -43,7 +53,7 @@
                         <a asp-controller="Traffic" asp-action="Edit" asp-route-id="@obj.Id_Traffic">
                             ویرایش
                         </a>
-                        <a asp-controller="Traffic" asp-action="DeleteUser" asp-route-id="@obj.Id_Traffic">
+                        <a asp-controller="Traffic" asp-action="Delete" asp-route-id="@obj.Id_Traffic">
                             حذف
                         </a>
                     </div>

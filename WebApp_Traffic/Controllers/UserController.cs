@@ -25,6 +25,25 @@ namespace WebApp_Traffic.Controllers
             return View(UserList);
         }
 
+        //filter of Traffic User
+        public IActionResult Filter(string txt)
+        {
+            IEnumerable<User> UserList = _db.Users;
+            User F_User = new User();
+            foreach (var i in UserList)
+            {
+                if (i.FirstName == txt)
+                {
+                    F_User.FirstName = txt;
+                    F_User.LastName = i.LastName;
+                    F_User.National_Code = i.National_Code;
+                    F_User.Id= i.Id;
+                    break;
+                }
+            }
+            return View(F_User);
+        }
+
         //Get
         //this action for make the form for user
         public IActionResult Create()

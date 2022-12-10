@@ -1,0 +1,29 @@
+﻿@model Traffic
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post" asp-action="DeletePost">
+    <input asp-for="Id_Traffic" type="hidden" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2>حذف کاربر</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="userid"></label>
+            <input asp-for="userid" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="EntryOrOut_Time"></label>
+            <input asp-for="EntryOrOut_Time" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Type_Traffic"></label>
+            <input asp-for="Type_Traffic" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-outline-primary" style="width:150px">حذف تردد</button>
+        <a asp-controller="Traffic" asp-action="Index" class="btn btn-outline-secondary" style="width:200px">بازگشت به لیست ترددها</a>
+    </div>
+</form>
+

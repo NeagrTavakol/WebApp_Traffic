@@ -36,12 +36,12 @@ namespace WebApp_Traffic.Migrations
                     b.Property<int>("Type_Traffic")
                         .HasColumnType("int");
 
-                    b.Property<int>("userId")
+                    b.Property<int>("userid")
                         .HasColumnType("int");
 
                     b.HasKey("Id_Traffic");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("userid");
 
                     b.ToTable("Traffics");
                 });
@@ -74,7 +74,7 @@ namespace WebApp_Traffic.Migrations
                 {
                     b.HasOne("WebApp_Traffic.Models.User", "user")
                         .WithMany("Traffics")
-                        .HasForeignKey("userId")
+                        .HasForeignKey("userid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
