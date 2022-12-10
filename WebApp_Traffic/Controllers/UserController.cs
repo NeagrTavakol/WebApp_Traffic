@@ -83,9 +83,13 @@ namespace WebApp_Traffic.Controllers
 
             TempData["Success"] = "کاربر جدید با موفقیت اضافه شد";
 
-            return RedirectToAction("Index");
+            return View("ShowUnique_Code",obj);
         }
 
+        public IActionResult ShowUnique_Code(User obj)
+        {
+            return View(obj);
+        }
         //Get
         //this action for Edit detail of user
         public IActionResult EditUser(int? id)
