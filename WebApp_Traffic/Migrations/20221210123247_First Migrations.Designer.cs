@@ -12,7 +12,7 @@ using WebApp_Traffic.Data;
 namespace WebApp_Traffic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221210091208_FirstMigrations")]
+    [Migration("20221210123247_First Migrations")]
     partial class FirstMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

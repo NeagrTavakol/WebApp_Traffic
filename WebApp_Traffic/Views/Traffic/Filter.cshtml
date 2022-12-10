@@ -1,14 +1,15 @@
-﻿@model IEnumerable<Traffic>
+﻿@model Traffic
 @{
     ViewData["Title"] = "Filter";
 }
-
+<br />
 <table class="table table-striped table-bordered" style="width:100%">
+    <input asp-for="Id_Traffic" type="hidden" />
     <thead>
         <tr class="table-primary">
-            @*<th>
+            <th>
                 کد یکتا
-            </th>*@
+            </th>
             <th>
                 تاریخ 
             </th>
@@ -21,30 +22,27 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var obj in Model)
-        {
             <tr>
-                @*<td width="20%">
-                    @obj.user.Id
-                </td>*@
-                <td width="30%">
-                    @obj.EntryOrOut_Time
+                <td width="20%">
+                    @Model.userid
                 </td>
                 <td width="30%">
-                    @obj.Type_Traffic
+                    @Model.EntryOrOut_Time
+                </td>
+                <td width="30%">
+                    @Model.Type_Traffic
                 </td>
                 <td>
                     <div class="w-75 btn-group" role="group">
-                        <a asp-controller="Traffic" asp-action="Edit" asp-route-id="@obj.Id_Traffic">
+                        <a asp-controller="Traffic" asp-action="Edit" asp-route-id="@Model.Id_Traffic">
                             ویرایش
                         </a>
-                        <a asp-controller="Traffic" asp-action="DeleteUser" asp-route-id="@obj.Id_Traffic">
+                        <a asp-controller="Traffic" asp-action="DeleteUser" asp-route-id="@Model.Id_Traffic">
                             حذف
                         </a>
                     </div>
                 </td>
             </tr>
-        }
     </tbody>
 
 </table>

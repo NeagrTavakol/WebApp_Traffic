@@ -23,19 +23,22 @@ namespace WebApp_Traffic.Controllers
         //filter of Traffic User
         public IActionResult Filter(string txt)
         {
+            var txt_int = Convert.ToInt32(txt);
+            Traffic traffic = new Traffic();
+            traffic.user = _db.Users.Find(txt_int);
             IEnumerable<Traffic> TrafficList = _db.Traffics;
-            Traffic F_Traffic = new Traffic();
+            //Traffic F_Traffic = new Traffic();
             foreach (var i in TrafficList)
             {
-                if (i.user.FirstName == txt)
+                if (i.user == traffic.user)
                 {
-                    
-                    F_Traffic.Type_Traffic = i.Type_Traffic;
-                    F_Traffic.EntryOrOut_Time = i.EntryOrOut_Time;
+                    traffic.userid = txt_int;
+                    traffic.Type_Traffic = i.Type_Traffic;
+                    traffic.EntryOrOut_Time = i.EntryOrOut_Time;
                     break;
                 }
             }
-                return View(F_Traffic);
+                return View(traffic);
             }
 
         //Get
@@ -62,8 +65,9 @@ namespace WebApp_Traffic.Controllers
         [HttpPost]
         public IActionResult Edit(Traffic obj)
         {
-
-            _db.Traffics.Update(obj);
+            Traffic traffic = obj;
+            traffic.user = _db.Users.Find(obj.userid);
+            _db.Traffics.Update(traffic);
             _db.SaveChanges();
             TempData["Success"] = "تردد مورد نظر با موفقیت ویرایش شد";
 
@@ -90,10 +94,11 @@ namespace WebApp_Traffic.Controllers
         //post
         // this action for delete selected record
         [HttpPost]
-        public IActionResult DeletePost(int? id)
+        public IActionResult DeletePost(Traffic obj)
         {
-            var obj = _db.Traffics.Find(id);
-            _db.Traffics.Remove(obj);
+            Traffic traffic = obj;
+            traffic.user = _db.Users.Find(obj.userid);
+            _db.Traffics.Remove(traffic);
             _db.SaveChanges();
             TempData["Success"] = "تردد مورد نظر با موفقیت حذف شد";
             return RedirectToAction("Index");
@@ -109,11 +114,22 @@ namespace WebApp_Traffic.Controllers
             {
                 return NotFound();
             }
-            foreach (WebApp_Traffic.Models.User u in _db.Users.ToList())
+            traffic1.user = _db.Users.Find(code);
+            if(traffic1.user == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                traffic1.EntryOrOut_Time = DateTime.Now;
+                traffic1.userid = code;
+            }
+            /*foreach (WebApp_Traffic.Models.User u in _db.Users.ToList())
             {
                 if (u.Id == code)
                 {
                     traffic1.userid = u.Id;
+                    traffic1.user = _db.Users.Find(u.Id);
                     traffic1.EntryOrOut_Time = DateTime.Now;
                     break;
                 }
@@ -123,18 +139,17 @@ namespace WebApp_Traffic.Controllers
                     ViewData["Message_2"] = "!کاربر ثبت نام نکرده است یا ایدی اشتباه است";
                     break;
                 }
-            }
+            }*/
             foreach(var i in TrafficList)
             {
                 if(i.userid==traffic1.userid)
                 {
                     traffic1.Type_Traffic = 1;
+                    break;
                 }
-                else
-                {
-                    traffic1.Type_Traffic = 0;
-                }
+                
             }
+
             _db.Traffics.Add(traffic1);
             _db.SaveChanges();
 

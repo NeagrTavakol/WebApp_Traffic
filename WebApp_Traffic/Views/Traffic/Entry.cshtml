@@ -13,25 +13,29 @@
 
 @if(Model.Type_Traffic == 0 && Model!=null)
 {
-    <h3>ورورد</h3>
+    <h3>ورود</h3>
     <p>
-        FirstName : @Model.user.FirstName
+        @*FirstName : @Model.user.FirstName
         LastName : @Model.user.LastName
         DateTime : @Model.EntryOrOut_Time
-        Type : @Model.Type_Traffic
+        Type : @Model.Type_Traffic*@
+        @*کاربر @Model.user.FirstName  @Model.user.LastName درتاریخ @Model.EntryOrOut_Time وارد شد*@
+        کاربر  @Model.user.FirstName @Model.user.LastName
+        در تاریخ  @Model.EntryOrOut_Time
+        وارد شد
     </p>
 
 }
-else if (Model.Type_Traffic == 1 && Model != null)
+else if (Model.Type_Traffic == 1 && Model!= null)
 {
 <h3>خروج</h3>
-<p>
-    FirstName : @Model.user.FirstName
-    LastName : @Model.user.LastName
-    DateTime : @Model.EntryOrOut_Time
-    Type : @Model.Type_Traffic
+    <p>
+        کاربر : @Model.user.FirstName @Model.user.LastName
+        در تاریخ : @Model.EntryOrOut_Time
+        خارج شد
     </p>
 }
+
 else
 {
     <h3>@data_2</h3>
